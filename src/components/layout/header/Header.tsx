@@ -1,13 +1,13 @@
 import HeaderLogo from "./HeaderLogo";
-import { ThemeToggle } from "@components/features/ToggleTheme";
 import HeaderSearch from "./HeaderSearch";
 import HeaderLinks from "./HeaderLinks";
 import Container from "@app/ui/Container";
+import HeaderPanel from "./HeaderPanel";
 
 const Header = () => {
   return (
     <header className="py-3">
-      <Container className="mx-auto flex flex-col md:flex-row">
+      <Container className="mx-auto flex flex-col md:flex-row md:h-[110px]">
         <HeaderLogo />
         <div className="flex flex-1 flex-col">
           <div className="flex-1 px-3 py-2 flex items-end">
@@ -20,9 +20,7 @@ const Header = () => {
             <HeaderLinks className="flex-1 flex justify-around" />
           </div>
         </div>
-        <div className="">
-          <ThemeToggle />
-        </div>
+        <HeaderPanel />
       </Container>
     </header>
   );

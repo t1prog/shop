@@ -16,8 +16,8 @@ const App = () => {
 
   return (
     <Layout>
-      <main className="flex-1">
-        <Container>
+      <main className="flex-1 flex">
+        <Container className="border flex-1">
           <Outlet />
         </Container>
       </main>

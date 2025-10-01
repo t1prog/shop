@@ -1,5 +1,6 @@
 type StorageSchema = {
   theme: "light" | "dark";
+  token: string | null;
 };
 
 export const storageGet = <K extends keyof StorageSchema>(

@@ -1,5 +1,7 @@
 import { useTheme, useThemeActions } from "@app/hooks/redux";
-// import style from "./ThemeToggle.module.scss";
+import styles from "./ThemeToggle.module.scss";
+import SunIcon from "@assets/svg/moon.min.svg?react";
+import MoonIcon from "@assets/svg/sun.min.svg?react";
 import clsx from "clsx";
 
 export interface ThemeToggleProps {
@@ -17,9 +19,13 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
       aria-checked="true"
       title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
       onClick={toggleTheme}
-      className={clsx(className, "")}
+      className={clsx(className, styles.Toggle)}
     >
-      <span className="">🌓 {theme === "dark" ? "Dark" : "Light"}</span>
+      {theme === "dark" ? (
+        <MoonIcon fill="none" className={styles.Img} />
+      ) : (
+        <SunIcon fill="red" className={styles.Img} />
+      )}
     </button>
   );
 };
