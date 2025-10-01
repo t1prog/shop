@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --base-black: #2b2b2b;
+  --base-white: #e6e6e6;
+}
+
+:root[data-theme="light"] {
+  --theme-main: var(--base-white);
+  --theme-second: var(--base-black);
+}
+
+:root[data-theme="dark"] {
+  --theme-main: var(--base-black);
+  --theme-second: var(--base-white);
+}
+
+body {
+  background-color: var(--theme-main);
+  color: var(--theme-second);
+}
