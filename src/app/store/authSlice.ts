@@ -1,7 +1,5 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from "@reduxjs/toolkit";
-
 import type { AuthState, LoginCredentials, User, RegisterData } from "@app/types/auth";
-
 import { storage } from "@app/utils/localStorage";
 
 const initialState: AuthState = {
@@ -10,6 +8,7 @@ const initialState: AuthState = {
   isAuth: !!storage.get("token", null),
   isLoading: false,
   error: null,
+  isError: false,
   _persisted: false,
 };
 
@@ -71,6 +70,18 @@ export const registerUser = createAsyncThunk(
 export const fetchUserProfile = createAsyncThunk(
   "auth/fetchProfile",
   async (_, { rejectWithValue }) => {
+    // TODO: REMOVE
+    //В режиме разработки — возвращаем мок
+    if (import.meta.env.DEV) {
+      return {
+        user: {
+          id: "1",
+          name: "Тестовый Пользователь",
+          email: "test@example.com",
+        },
+      };
+    }
+
     try {
       // Мб перейду на axios
       const token = storage.get("token", null);
@@ -118,6 +129,7 @@ const authSlice = createSlice({
       // login
       .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
+        state.isError = false;
         state.error = null;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
@@ -130,11 +142,13 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.isAuth = false;
         state.error = action.payload as string;
+        state.isError = true;
       })
       // reg
       .addCase(registerUser.pending, (state) => {
         state.isLoading = true;
         state.error = null;
+        state.isError = false;
       })
       .addCase(registerUser.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -145,6 +159,7 @@ const authSlice = createSlice({
       .addCase(registerUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload as string;
+        state.isError = true;
       })
       // fetch profile
       .addCase(fetchUserProfile.pending, (state) => {
@@ -161,6 +176,7 @@ const authSlice = createSlice({
         state.token = null;
         state.isAuth = false;
         state.error = action.payload as string;
+        state.isError = true;
       });
   },
 });

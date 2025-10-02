@@ -10,6 +10,7 @@ export interface AuthState {
   isAuth: boolean;
   isLoading: boolean;
   error: string | null;
+  isError: boolean;
   _persisted: boolean;
 }
 

@@ -23,22 +23,11 @@ const routes: RouteObject[] = [
         element: <Catalog />,
       },
       { path: "product/:id", element: <Product /> },
-      {
-        path: "profile/",
-        element: (
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/login",
-        element: (
-          <PublicRoute>
-            <Auth />
-          </PublicRoute>
-        ),
-      },
+      // Защищенные руоты
+      { element: <ProtectedRoute />, children: [{ path: "profile/", element: <Profile /> }] },
+      // Публичные маршруты
+      { element: <PublicRoute />, children: [{ path: "login/", element: <Auth /> }] },
+      // пока так
       { path: "*", element: <NotFound /> },
     ],
   },

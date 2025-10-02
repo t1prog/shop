@@ -1,23 +1,22 @@
-import { useAuth } from "@app/hooks/redux/useAuth";
-import { useLocation, Navigate } from "react-router";
+import { Navigate, Outlet } from "react-router";
+import { useAuth } from "@src/app/hooks/redux";
 
-interface ProtectedRouteProps {
-  children: React.ReactNode;
-}
-
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const { isAuth, isLoading } = useAuth();
-  const location = useLocation();
+const ProtectedRoute = () => {
+  const { isAuth, isLoading, isError } = useAuth();
 
   if (isLoading) {
-    return <div>Тут будет загрузка</div>;
+    return <div>Загрузка...</div>;
+  }
+
+  if (isError) {
+    return <Navigate to="/login" replace />;
   }
 
   if (!isAuth) {
-    return <Navigate to="/login" state={{ from: location }} replace={true} />;
+    return <Navigate to="/login" replace />;
   }
 
-  return <>{children}</>;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

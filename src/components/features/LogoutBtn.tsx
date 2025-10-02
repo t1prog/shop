@@ -4,8 +4,8 @@ import Button from "@app/ui/Button";
 const LogoutBtn = () => {
   const { logout } = useAuth();
   return (
-    <Button onClick={logout} className="!border-red-100">
-      <span className="!text-red-100">Выйти</span>
+    <Button onClick={logout} className="!border-red-400">
+      <span className="!text-red-400">Выйти</span>
     </Button>
   );
 };

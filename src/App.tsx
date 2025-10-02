@@ -8,7 +8,7 @@ import { AuthService } from "@app/services/authService";
 import "./index.css";
 
 const App = () => {
-  const theme = useTheme();
+  const { theme } = useTheme();
   const { token } = useAuth();
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useTheme, useThemeActions } from "@app/hooks/redux";
+import { useTheme } from "@app/hooks/redux";
 import styles from "./ThemeToggle.module.scss";
 import SunIcon from "@assets/svg/moon.min.svg?react";
 import MoonIcon from "@assets/svg/sun.min.svg?react";
@@ -9,8 +9,7 @@ export interface ThemeToggleProps {
 }
 
 export const ThemeToggle = ({ className }: ThemeToggleProps) => {
-  const { toggleTheme } = useThemeActions();
-  const theme = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
   return (
     <button

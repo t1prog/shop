@@ -1,18 +1,14 @@
-import { useAuth } from "@app/hooks/redux/useAuth";
-import { Navigate } from "react-router";
+import { Navigate, Outlet } from "react-router";
+import { useAuth } from "@app/hooks/redux";
 
-interface PublicRouteProps {
-  children: React.ReactNode;
-}
+const PublicRoute = () => {
+  const { isAuth, isLoading } = useAuth();
 
-const PublicRoute: React.FC<PublicRouteProps> = ({ children }) => {
-  const { isAuth } = useAuth();
-
-  if (isAuth) {
-    return <Navigate to="/" replace />;
+  if (isLoading) {
+    return <div>Загрузка...</div>;
   }
 
-  return <>{children}</>;
+  return isAuth ? <Navigate to="/" replace /> : <Outlet />;
 };
 
 export default PublicRoute;

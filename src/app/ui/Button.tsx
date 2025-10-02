@@ -9,13 +9,13 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   className,
   children,
   onClick,
   disabled = false,
   type = "button",
-}) => {
+}: ButtonProps) => {
   const _className = clsx(className, style.Button, disabled && style.disabled);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
