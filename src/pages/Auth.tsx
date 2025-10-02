@@ -1,13 +1,26 @@
 import { useAuth } from "@app/hooks/redux/useAuth";
-import { AuthService } from "@src/app/services/authService";
-import Button from "@app/ui/Button";
+import Registration from "@src/components/auth/Registration";
+import { useEffect } from "react";
+import { useLocation, useMatches } from "react-router";
+import type { RouteHandle } from "@src/app/types/router";
 
 const Auth = () => {
   const { isAuth } = useAuth();
+  const matches = useMatches();
+  const location = useLocation();
 
-  const testUserSet = () => {
-    AuthService.setToken("test-token");
-  };
+  useEffect(() => {
+    const routeMatch = matches.find((match) => (match.handle as RouteHandle)?.title);
+    const title = (routeMatch?.handle as RouteHandle)?.title;
+
+    if (title) {
+      document.title = title;
+    }
+  }, [location, matches]);
+
+  if (!isAuth) {
+    return <Registration />;
+  }
 
   return (
     <div className="h-full">
@@ -15,10 +28,6 @@ const Auth = () => {
         <span>Регистрация/</span>
         <span>Авторизация</span>
       </h2>
-      <div className="flex flex-col justify-center items-center">
-        <h1>Ты {isAuth ? "" : "не"} авторизован!</h1>
-        <Button onClick={testUserSet}>Зайти под тестом</Button>
-      </div>
     </div>
   );
 };

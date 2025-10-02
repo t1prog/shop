@@ -4,7 +4,7 @@ import { useTheme, useAuth } from "@app/hooks/redux";
 import { storage } from "@app/utils/localStorage";
 import Container from "@app/ui/Container";
 import Layout from "@components/layout/Layout";
-import { AuthService } from "@app/services/authService";
+import { authService } from "@app/services/authService";
 import "./index.css";
 
 const App = () => {
@@ -18,9 +18,9 @@ const App = () => {
 
   useEffect(() => {
     if (token) {
-      AuthService.setToken(token);
+      authService.setToken(token);
     } else {
-      AuthService.clearToken();
+      authService.clearToken();
     }
   }, [token]);
 

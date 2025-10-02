@@ -34,6 +34,7 @@
       "@types": path.resolve(__dirname, "./src/app/types"),
       "@store": path.resolve(__dirname, "./src/app/store"),
       "@lib": path.resolve(__dirname, "./src/app/lib"),
+      '@srv': path.resolve(__dirname, "./server")
     */
     "paths": {
       "@src/*": ["./src/*"],
@@ -44,7 +45,8 @@
       // "@store/*": ["./src/app/store/*"],
       // "@lib/*": ["./src/app/lib/*"],
       "@app/*": ["./src/app/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@srv/*": ["./server/*"]
     }
   },
   "include": ["src"]

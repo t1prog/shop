@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import clsx from "clsx";
 
 type HeaderLinksProps = {
@@ -7,15 +9,15 @@ type HeaderLinksProps = {
 const HeaderLinks = ({ className }: HeaderLinksProps) => {
   return (
     <nav className={clsx(className, "flex justify-center space-x-4")}>
-      <a href="/" className="font-medium px-3 py-2 hover:underline">
+      <Link to="/" className="font-medium px-3 py-2 hover:underline">
         Главная
-      </a>
-      <a href="/catalog" className="font-medium px-3 py-2 hover:underline">
+      </Link>
+      <Link to="/catalog" className="font-medium px-3 py-2 hover:underline">
         Каталог
-      </a>
-      <a href="/about" className="font-medium px-3 py-2 hover:underline">
+      </Link>
+      <Link to="/about" className="font-medium px-3 py-2 hover:underline">
         Обо мне
-      </a>
+      </Link>
     </nav>
   );
 };

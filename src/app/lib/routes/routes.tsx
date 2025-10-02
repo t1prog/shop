@@ -1,4 +1,4 @@
-import { type RouteObject, type DataRouter, createBrowserRouter } from "react-router";
+import { type DataRouter, createBrowserRouter } from "react-router";
 import App from "@src/App";
 import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
@@ -8,8 +8,9 @@ import Auth from "@pages/Auth";
 import Profile from "@pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
+import { type AppRouteObject } from "@src/app/types/router";
 
-const routes: RouteObject[] = [
+const routes: AppRouteObject[] = [
   {
     path: "/",
     element: <App />,
@@ -17,18 +18,28 @@ const routes: RouteObject[] = [
       {
         index: true,
         element: <Home />,
+        handle: { title: "SomeShop" },
       },
       {
         path: "catalog/",
         element: <Catalog />,
+        handle: { title: "Каталог" },
       },
-      { path: "product/:id", element: <Product /> },
-      // Защищенные руоты
-      { element: <ProtectedRoute />, children: [{ path: "profile/", element: <Profile /> }] },
+      { path: "product/:id", element: <Product />, handle: { title: "Профиль" } },
+      // Защищенные маршруты
+      {
+        element: <ProtectedRoute />,
+        children: [{ path: "profile/", element: <Profile />, handle: { title: "Профиль" } }],
+      },
       // Публичные маршруты
-      { element: <PublicRoute />, children: [{ path: "login/", element: <Auth /> }] },
+      {
+        element: <PublicRoute />,
+        children: [
+          { path: "login/", element: <Auth />, handle: { title: "Регистрация/Авторизация" } },
+        ],
+      },
       // пока так
-      { path: "*", element: <NotFound /> },
+      { path: "*", element: <NotFound />, handle: { title: "404" } },
     ],
   },
 ];

@@ -1,11 +1,11 @@
-import { createSlice, createAsyncThunk, type PayloadAction } from "@reduxjs/toolkit";
-import type { AuthState, LoginCredentials, User, RegisterData } from "@app/types/auth";
-import { storage } from "@app/utils/localStorage";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import type { AuthState, LoginCredentials, RegisterData } from "@app/types/auth";
+import { authService } from "@app/services/authService";
 
 const initialState: AuthState = {
   user: null,
-  token: storage.get("token", null),
-  isAuth: !!storage.get("token", null),
+  token: authService.getToken(),
+  isAuth: authService.isAuthenticated(),
   isLoading: false,
   error: null,
   isError: false,
@@ -16,24 +16,13 @@ export const loginUser = createAsyncThunk(
   "auth/login",
   async (userData: LoginCredentials, { rejectWithValue }) => {
     try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(userData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "login failed");
-      }
-
+      const data = await authService.login(userData);
       return data;
     } catch (error: unknown) {
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       } else {
-        return rejectWithValue("unknown error");
+        return rejectWithValue("Unknown error occurred");
       }
     }
   },
@@ -43,25 +32,13 @@ export const registerUser = createAsyncThunk(
   "auth/register",
   async (userData: RegisterData, { rejectWithValue }) => {
     try {
-      // Мб перейду на axios
-      const response = await fetch("/api/auth/register", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(userData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Registration failed");
-      }
-
+      const data = await authService.register(userData);
       return data;
     } catch (error: unknown) {
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       } else {
-        return rejectWithValue("unknown error");
+        return rejectWithValue("Unknown error occurred");
       }
     }
   },
@@ -70,63 +47,55 @@ export const registerUser = createAsyncThunk(
 export const fetchUserProfile = createAsyncThunk(
   "auth/fetchProfile",
   async (_, { rejectWithValue }) => {
-    // TODO: REMOVE
-    //В режиме разработки — возвращаем мок
-    if (import.meta.env.DEV) {
-      return {
-        user: {
-          id: "1",
-          name: "Тестовый Пользователь",
-          email: "test@example.com",
-        },
-      };
-    }
-
     try {
-      // Мб перейду на axios
-      const token = storage.get("token", null);
-      const response = await fetch("/api/auth/me", {
-        headers: { "Authorization": `Bearer ${token}` },
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "fetch profile failed");
-      }
-
+      const data = await authService.getProfile();
       return data;
     } catch (error: unknown) {
       if (error instanceof Error) {
         return rejectWithValue(error.message);
       } else {
-        return rejectWithValue("unknown error");
+        return rejectWithValue("Unknown error occurred");
       }
     }
   },
 );
 
+export const logoutUser = createAsyncThunk("auth/logout", async (_, { rejectWithValue }) => {
+  try {
+    await authService.logout();
+    return;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return rejectWithValue(error.message);
+    } else {
+      return rejectWithValue("Unknown error occurred");
+    }
+  }
+});
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setCredentials: (state, action: PayloadAction<{ user: User; token: string }>) => {
+    setCredentials: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isAuth = true;
+      authService.setToken(action.payload.token);
     },
     clearCredentials: (state) => {
       state.user = null;
       state.token = null;
       state.isAuth = false;
+      authService.clearToken();
     },
     setPersisted: (state) => {
       state._persisted = true;
     },
   },
-  extraReducers(builder) {
+  extraReducers: (builder) => {
     builder
-      // login
+      // Login
       .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
         state.isError = false;
@@ -143,8 +112,9 @@ const authSlice = createSlice({
         state.isAuth = false;
         state.error = action.payload as string;
         state.isError = true;
+        authService.clearToken();
       })
-      // reg
+      // Register
       .addCase(registerUser.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -160,8 +130,9 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload as string;
         state.isError = true;
+        authService.clearToken();
       })
-      // fetch profile
+      // Fetch Profile
       .addCase(fetchUserProfile.pending, (state) => {
         state.isLoading = true;
       })
@@ -177,6 +148,15 @@ const authSlice = createSlice({
         state.isAuth = false;
         state.error = action.payload as string;
         state.isError = true;
+        authService.clearToken();
+      })
+      // Logout
+      .addCase(logoutUser.fulfilled, (state) => {
+        state.user = null;
+        state.token = null;
+        state.isAuth = false;
+        state.error = null;
+        state.isError = false;
       });
   },
 });

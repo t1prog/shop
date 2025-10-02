@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "@app/hooks/redux";
 import { useEffect, useCallback } from "react";
-import { AuthService } from "@app/services/authService";
+import { authService } from "@app/services/authService";
 import { fetchUserProfile, clearCredentials } from "@app/store/authSlice";
 
 export const useAuth = () => {
@@ -8,7 +8,7 @@ export const useAuth = () => {
   const auth = useAppSelector((state) => state.auth);
 
   useEffect(() => {
-    const token = AuthService.getToken();
+    const token = authService.getToken();
     if (token && !auth.user) {
       dispatch(fetchUserProfile());
     }

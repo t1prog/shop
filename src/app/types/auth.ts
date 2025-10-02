@@ -4,6 +4,17 @@ export interface User {
   name: string;
 }
 
+export interface RegistrationForm extends Omit<User, "id"> {
+  name: string;
+  email: string;
+  password: string;
+  passwordRepeat: string;
+}
+
+export interface LoginForm {
+  email: string;
+  password: string;
+}
 export interface AuthState {
   user: User | null;
   token: string | null;

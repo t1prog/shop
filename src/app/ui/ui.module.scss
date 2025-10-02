@@ -23,8 +23,32 @@
 
   &:disabled {
     opacity: 0.6;
-    cursor: not-allowed;
+    cursor: default;
     transform: none;
     box-shadow: none;
+  }
+}
+
+.Input {
+  position: relative;
+  border: 1px solid var(--theme-second);
+  background-color: unset !important;
+  border-radius: 8px;
+}
+
+.FormField {
+  user-select: none;
+  &Input {
+    user-select: auto;
+    &::placeholder {
+      user-select: none;
+    }
+  }
+  &Label {
+    user-select: none;
+  }
+
+  &ErrorMessage {
+    user-select: none;
   }
 }
