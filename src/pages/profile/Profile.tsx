@@ -1,5 +1,15 @@
+import LogoutBtn from "@components/features/LogoutBtn";
+import { useAuth } from "@app/hooks/redux/useAuth";
+
 const Profile = () => {
-  return <div>Это твой профиль бро</div>;
+  const auth = useAuth();
+  console.log(auth);
+
+  return (
+    <div className="flex">
+      <LogoutBtn />
+    </div>
+  );
 };
 
 export default Profile;

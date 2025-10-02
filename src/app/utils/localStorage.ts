@@ -1,9 +1,12 @@
+import type { User } from "@app/types/auth";
+
 type StorageSchema = {
   theme: "light" | "dark";
   token: string | null;
+  user: User | null;
 };
 
-export const storageGet = <K extends keyof StorageSchema>(
+const get = <K extends keyof StorageSchema>(
   key: K,
   fallback: StorageSchema[K],
 ): StorageSchema[K] => {
@@ -17,10 +20,7 @@ export const storageGet = <K extends keyof StorageSchema>(
   }
 };
 
-export const storageSet = <K extends keyof StorageSchema>(
-  key: K,
-  value: StorageSchema[K],
-): void => {
+const set = <K extends keyof StorageSchema>(key: K, value: StorageSchema[K]): void => {
   try {
     const serialized = JSON.stringify(value);
     window.localStorage.setItem(key, serialized);
@@ -28,3 +28,9 @@ export const storageSet = <K extends keyof StorageSchema>(
     console.error(`Не удалось сохранить "${key}" в localStorage:`, error);
   }
 };
+
+const remove = <K extends keyof StorageSchema>(key: K): void => {
+  window.localStorage.removeItem(key);
+};
+
+export const storage = { get, set, remove };

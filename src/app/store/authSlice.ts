@@ -1,31 +1,22 @@
-import {
-  createSlice,
-  createAsyncThunk,
-  type PayloadAction,
-} from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, type PayloadAction } from "@reduxjs/toolkit";
 
-import type {
-  AuthState,
-  LoginCredentials,
-  User,
-  RegisterData,
-} from "@app/types/auth";
+import type { AuthState, LoginCredentials, User, RegisterData } from "@app/types/auth";
 
-import { storageGet, storageSet } from "@app/utils/localStorage";
+import { storage } from "@app/utils/localStorage";
 
 const initialState: AuthState = {
   user: null,
-  token: storageGet("token", null),
-  isAuth: !!storageGet("token", null),
+  token: storage.get("token", null),
+  isAuth: !!storage.get("token", null),
   isLoading: false,
   error: null,
+  _persisted: false,
 };
 
 export const loginUser = createAsyncThunk(
   "auth/login",
   async (userData: LoginCredentials, { rejectWithValue }) => {
     try {
-      // Мб перейду на axios
       const response = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-type": "application/json" },
@@ -37,8 +28,6 @@ export const loginUser = createAsyncThunk(
       if (!response.ok) {
         throw new Error(data.message || "login failed");
       }
-
-      storageSet("token", data.token);
 
       return data;
     } catch (error: unknown) {
@@ -84,7 +73,7 @@ export const fetchUserProfile = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       // Мб перейду на axios
-      const token = storageGet("token", null);
+      const token = storage.get("token", null);
       const response = await fetch("/api/auth/me", {
         headers: { "Authorization": `Bearer ${token}` },
       });
@@ -110,22 +99,18 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    logout: (state) => {
-      state.user = null;
-      // и тут
-      state.token = null;
-      // и там
-      storageSet("token", null);
-      state.isAuth = false;
-      state.error = null;
-    },
-    setUser: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
+    setCredentials: (state, action: PayloadAction<{ user: User; token: string }>) => {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
       state.isAuth = true;
     },
-    // Чтоб было
-    clearError: (state) => {
-      state.error = null;
+    clearCredentials: (state) => {
+      state.user = null;
+      state.token = null;
+      state.isAuth = false;
+    },
+    setPersisted: (state) => {
+      state._persisted = true;
     },
   },
   extraReducers(builder) {
@@ -143,8 +128,8 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload as string;
         state.isAuth = false;
+        state.error = action.payload as string;
       })
       // reg
       .addCase(registerUser.pending, (state) => {
@@ -162,18 +147,23 @@ const authSlice = createSlice({
         state.error = action.payload as string;
       })
       // fetch profile
+      .addCase(fetchUserProfile.pending, (state) => {
+        state.isLoading = true;
+      })
       .addCase(fetchUserProfile.fulfilled, (state, action) => {
+        state.isLoading = false;
         state.user = action.payload.user;
         state.isAuth = true;
       })
-      .addCase(fetchUserProfile.rejected, (state) => {
+      .addCase(fetchUserProfile.rejected, (state, action) => {
+        state.isLoading = false;
         state.user = null;
         state.token = null;
         state.isAuth = false;
-        storageSet("token", null);
+        state.error = action.payload as string;
       });
   },
 });
 
-export const { logout, clearError, setUser } = authSlice.actions;
+export const { setCredentials, clearCredentials, setPersisted } = authSlice.actions;
 export default authSlice.reducer;

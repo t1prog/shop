@@ -1,14 +1,22 @@
 import { useAppDispatch, useAppSelector } from "@app/hooks/redux";
-import { useCallback } from "react";
-import { logout } from "@app/store/authSlice";
+import { useEffect, useCallback } from "react";
+import { AuthService } from "@app/services/authService";
+import { fetchUserProfile, clearCredentials } from "@app/store/authSlice";
 
-export const useAuth = () => useAppSelector((state) => state.auth);
-
-export const useAuthActions = () => {
+export const useAuth = () => {
   const dispatch = useAppDispatch();
-  return {
-    logout: useCallback(() => {
-      dispatch(logout());
-    }, [dispatch]),
-  };
+  const auth = useAppSelector((state) => state.auth);
+
+  useEffect(() => {
+    const token = AuthService.getToken();
+    if (token && !auth.user) {
+      dispatch(fetchUserProfile());
+    }
+  }, [dispatch, auth.user]);
+
+  const logout = useCallback(() => {
+    dispatch(clearCredentials());
+  }, [dispatch]);
+
+  return { ...auth, logout };
 };

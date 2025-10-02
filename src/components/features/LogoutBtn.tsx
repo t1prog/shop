@@ -1,0 +1,13 @@
+import { useAuth } from "@app/hooks/redux/useAuth";
+import Button from "@app/ui/Button";
+
+const LogoutBtn = () => {
+  const { logout } = useAuth();
+  return (
+    <Button onClick={logout} className="!border-red-100">
+      <span className="!text-red-100">Выйти</span>
+    </Button>
+  );
+};
+
+export default LogoutBtn;

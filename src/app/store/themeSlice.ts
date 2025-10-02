@@ -1,9 +1,9 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { Theme, ThemeState } from "@app/types/theme";
-import { storageGet } from "@app/utils/localStorage";
+import { storage } from "@app/utils/localStorage";
 
 const initialState: ThemeState = {
-  theme: storageGet("theme", "dark"),
+  theme: storage.get("theme", "dark"),
 };
 
 export const themeSlice = createSlice({

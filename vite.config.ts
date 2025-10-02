@@ -29,6 +29,7 @@ export default defineConfig({
       "@store": path.resolve(__dirname, "./src/app/store"),
       "@lib": path.resolve(__dirname, "./src/app/lib"),
       "@app": path.resolve(__dirname, "./src/app"),
+      "@src": path.resolve(__dirname, "./src"),
     },
   },
 });

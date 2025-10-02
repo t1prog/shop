@@ -1,4 +1,3 @@
-import Container from "@app/ui/Container";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 

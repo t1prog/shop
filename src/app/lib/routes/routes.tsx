@@ -1,18 +1,13 @@
-import {
-  type RouteObject,
-  type DataRouter,
-  createBrowserRouter,
-} from "react-router";
-import App from "@components/App";
+import { type RouteObject, type DataRouter, createBrowserRouter } from "react-router";
+import App from "@src/App";
 import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
 import Catalog from "@pages/Catalog";
 import Product from "@pages/product/Product";
-import Login from "@pages/auth/Login";
-import Register from "@pages/auth/Register";
+import Auth from "@pages/Auth";
+import Profile from "@pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
-import Profile from "@pages/profile/Profile";
 
 const routes: RouteObject[] = [
   {
@@ -25,11 +20,7 @@ const routes: RouteObject[] = [
       },
       {
         path: "catalog/",
-        element: (
-          <PublicRoute>
-            <Catalog />
-          </PublicRoute>
-        ),
+        element: <Catalog />,
       },
       { path: "product/:id", element: <Product /> },
       {
@@ -40,11 +31,17 @@ const routes: RouteObject[] = [
           </ProtectedRoute>
         ),
       },
+      {
+        path: "/login",
+        element: (
+          <PublicRoute>
+            <Auth />
+          </PublicRoute>
+        ),
+      },
+      { path: "*", element: <NotFound /> },
     ],
   },
-  { path: "/login", element: <Login /> },
-  { path: "/register", element: <Register /> },
-  { path: "*", element: <NotFound /> },
 ];
 
 const router: DataRouter = createBrowserRouter(routes);

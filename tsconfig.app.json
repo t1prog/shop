@@ -36,6 +36,7 @@
       "@lib": path.resolve(__dirname, "./src/app/lib"),
     */
     "paths": {
+      "@src/*": ["./src/*"],
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
       // "@hooks/*": ["./src/app/hooks/*"],

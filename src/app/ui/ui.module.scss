@@ -1,0 +1,30 @@
+.Button {
+  --main-hover: color-mix(in srgb, var(--theme-main), #000 15%);
+  --main-active: color-mix(in srgb, var(--theme-main), #000 25%);
+
+  border: 2px solid var(--theme-second);
+  background-color: var(--theme-main);
+  color: var(--theme-second);
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: var(--theme-second);
+
+  &:hover:not(:disabled) {
+    background-color: var(--main-hover);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--main-active);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
