@@ -14,14 +14,18 @@ export const authService = {
 
   // Auth methods
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
-    const response = await api.post<AuthResponse>("/auth/login", credentials);
-    this.setToken(response.token);
-    return response;
+    const response = await api.post<ApiResponse<AuthResponse>>("/auth/login", credentials);
+    if (response.success) {
+      this.setToken(response.data.token);
+      return response.data;
+    }
+    throw new Error(response.message);
   },
 
   async register(userData: RegisterData): Promise<AuthResponse> {
     const response = await api.post<ApiResponse<AuthResponse>>("/auth/register", userData);
     if (response.success) {
+      // TODO: ЛИБО УБРАТЬ И СДЕЛАТЬ РЕДИРЕКТ НА СТРАНИЦУ ЛОГИНА, ЛИБО ОБЪЕДЕНИТЬ МЕТОДЫ login register В ЕДИНЫЙ
       this.setToken(response.data.token);
       return response.data;
     }

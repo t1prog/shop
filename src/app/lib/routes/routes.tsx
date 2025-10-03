@@ -4,11 +4,12 @@ import Home from "@pages/Home";
 import NotFound from "@pages/NotFound";
 import Catalog from "@pages/Catalog";
 import Product from "@pages/product/Product";
-import Auth from "@pages/Auth";
 import Profile from "@pages/profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
 import { type AppRouteObject } from "@src/app/types/router";
+import Login from "@src/pages/Login";
+import Registration from "@src/pages/Registration";
 
 const routes: AppRouteObject[] = [
   {
@@ -35,7 +36,12 @@ const routes: AppRouteObject[] = [
       {
         element: <PublicRoute />,
         children: [
-          { path: "login/", element: <Auth />, handle: { title: "Регистрация/Авторизация" } },
+          {
+            path: "registration/",
+            element: <Registration />,
+            handle: { title: "Регистрация" },
+          },
+          { path: "login/", element: <Login />, handle: { title: "Авторизация" } },
         ],
       },
       // пока так

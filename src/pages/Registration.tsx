@@ -1,13 +1,12 @@
-// Registration.tsx
 import Button from "@src/app/ui/Button";
-// import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useRegistrationForm } from "@src/app/hooks/components/useRegistrationForm";
 import { FormField } from "@src/app/ui/FormField";
 import { useAppDispatch } from "@src/app/hooks/redux";
 import { registerUser } from "@app/store/authSlice";
 
 const Registration = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const {
     formData,
@@ -95,6 +94,9 @@ const Registration = () => {
 
           <Button type="submit" disabled={!isFormValid}>
             Зарегистрироваться
+          </Button>
+          <Button type="submit" onClick={() => navigate("/login")}>
+            Войти
           </Button>
         </form>
       </div>
