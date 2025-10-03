@@ -6,36 +6,80 @@ const router = express.Router();
 
 // фильтрация товаров по query-параметрам
 router.get("/", (req, res) => {
-  const { category, brand, inStock, isNew, isPopular } = req.query;
+  const {
+    category,
+    brand,
+    inStock,
+    isNew,
+    isPopular,
+    limit,
+    offset,
+    sort,
+    minPrice,
+    maxPrice,
+    search,
+  } = req.query;
+
   const db = getDB();
-
-  console.log(`total products in db: ${db.products.length}`);
-
   let filteredProducts = db.products;
 
-  if (category) {
-    filteredProducts = filteredProducts.filter((p) => p.category === category);
+  // Базовые фильтры
+  if (category) filteredProducts = filteredProducts.filter((p) => p.category === category);
+  if (brand) filteredProducts = filteredProducts.filter((p) => p.brand === brand);
+  if (inStock === "true") filteredProducts = filteredProducts.filter((p) => p.inStock);
+  if (isNew === "true") filteredProducts = filteredProducts.filter((p) => p.isNew);
+  if (isPopular === "true") filteredProducts = filteredProducts.filter((p) => p.isPopular);
+
+  // Фильтр по цене
+  if (minPrice) {
+    const min = parseInt(minPrice);
+    filteredProducts = filteredProducts.filter((p) => p.price >= min);
+  }
+  if (maxPrice) {
+    const max = parseInt(maxPrice);
+    filteredProducts = filteredProducts.filter((p) => p.price <= max);
   }
 
-  if (brand) {
-    filteredProducts = filteredProducts.filter((p) => p.brand === brand);
+  // Поиск по названию и описанию
+  if (search) {
+    const searchLower = search.toLowerCase();
+    filteredProducts = filteredProducts.filter(
+      (p) =>
+        p.name.toLowerCase().includes(searchLower) ||
+        p.description.toLowerCase().includes(searchLower),
+    );
   }
 
-  if (inStock === "true") {
-    filteredProducts = filteredProducts.filter((p) => p.inStock);
+  // Сортировка
+  if (!sort || sort === "popular") {
+    filteredProducts.sort((a, b) => {
+      if (a.isPopular !== b.isPopular) return a.isPopular ? -1 : 1;
+      return b.rating - a.rating;
+    });
+  } else if (sort === "rating") {
+    filteredProducts.sort((a, b) => b.rating - a.rating);
+  } else if (sort === "price_asc") {
+    filteredProducts.sort((a, b) => a.price - b.price);
+  } else if (sort === "price_desc") {
+    filteredProducts.sort((a, b) => b.price - a.price);
+  } else if (sort === "newest") {
+    filteredProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  } else if (sort === "name") {
+    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sort === "reviews") {
+    filteredProducts.sort((a, b) => b.reviewsCount - a.reviewsCount);
   }
 
-  if (isNew === "true") {
-    filteredProducts = filteredProducts.filter((p) => p.isNew);
-  }
+  // Пагинация
+  const limitNum = Math.max(0, parseInt(limit, 10) || 12);
+  const offsetNum = Math.max(0, parseInt(offset, 10) || 0);
+  const paginatedProducts = filteredProducts.slice(offsetNum, offsetNum + limitNum);
 
-  if (isPopular === "true") {
-    filteredProducts = filteredProducts.filter((p) => p.isPopular);
-  }
-
-  console.log(`returning ${filteredProducts.length} products after filtering`);
-
-  sendSuccess(res, filteredProducts);
+  sendSuccess(res, {
+    products: paginatedProducts,
+    total: filteredProducts.length,
+    hasMore: offsetNum + limitNum < filteredProducts.length,
+  });
 });
 
 router.get("/:id", (req, res) => {

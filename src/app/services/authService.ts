@@ -25,7 +25,7 @@ export const authService = {
   async register(userData: RegisterData): Promise<AuthResponse> {
     const response = await api.post<ApiResponse<AuthResponse>>("/auth/register", userData);
     if (response.success) {
-      // TODO: ЛИБО УБРАТЬ И СДЕЛАТЬ РЕДИРЕКТ НА СТРАНИЦУ ЛОГИНА, ЛИБО ОБЪЕДЕНИТЬ МЕТОДЫ login register В ЕДИНЫЙ
+      // TODO: ЛИБО УБРАТЬ И СДЕЛАТЬ РЕДИРЕКТ НА СТРАНИЦУ ЛОГИНА, ЛИБО ОБЪЕДЕНИТЬ МЕТОДЫ login / register В ЕДИНЫЙ
       this.setToken(response.data.token);
       return response.data;
     }
@@ -44,9 +44,5 @@ export const authService = {
   // Utility
   isAuthenticated(): boolean {
     return !!this.getToken();
-  },
-
-  clearAll(): void {
-    this.clearToken();
   },
 };

@@ -29,402 +29,6 @@
       "role": "admin",
       "createdAt": "2024-01-10T09:00:00.000Z",
       "updatedAt": "2024-01-10T09:00:00.000Z"
-    },
-    {
-      "id": "1759450553547",
-      "name": "Сергей ",
-      "email": "t@g.c",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:15:53.547Z",
-      "updatedAt": "2025-10-03T00:15:53.547Z"
-    },
-    {
-      "id": "1759450747287",
-      "name": "Евгений",
-      "email": "1@g.com",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:19:07.287Z",
-      "updatedAt": "2025-10-03T00:19:07.287Z"
-    },
-    {
-      "id": "1759450933577",
-      "name": "пппп",
-      "email": "r2@s.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:22:13.577Z",
-      "updatedAt": "2025-10-03T00:22:13.577Z"
-    },
-    {
-      "id": "1759451023368",
-      "name": "rty",
-      "email": "ert@we.qwe",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:23:43.368Z",
-      "updatedAt": "2025-10-03T00:23:43.368Z"
-    },
-    {
-      "id": "1759451113924",
-      "name": "wqe",
-      "email": "123@fs.cs",
-      "password": "1234Qwer",
-      "role": "user",
-      "createdAt": "2025-10-03T00:25:13.924Z",
-      "updatedAt": "2025-10-03T00:25:13.924Z"
-    },
-    {
-      "id": "1759451195827",
-      "name": "qwe",
-      "email": "qwe@qwe.2",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:26:35.827Z",
-      "updatedAt": "2025-10-03T00:26:35.827Z"
-    },
-    {
-      "id": "1759451692058",
-      "name": "jks",
-      "email": "sad@ads.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:34:52.058Z",
-      "updatedAt": "2025-10-03T00:34:52.058Z"
-    },
-    {
-      "id": "1759451983749",
-      "name": "цйу",
-      "email": "wer123@f.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:39:43.749Z",
-      "updatedAt": "2025-10-03T00:39:43.749Z"
-    },
-    {
-      "id": "1759452177806",
-      "name": "ыфв",
-      "email": "eq@asd.sda",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:42:57.806Z",
-      "updatedAt": "2025-10-03T00:42:57.806Z"
-    },
-    {
-      "id": "1759452236070",
-      "name": "qwe",
-      "email": "qwe@asd.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:43:56.070Z",
-      "updatedAt": "2025-10-03T00:43:56.070Z"
-    },
-    {
-      "id": "1759452377239",
-      "name": "wqe",
-      "email": "qwe@ewr.sdf",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:46:17.239Z",
-      "updatedAt": "2025-10-03T00:46:17.239Z"
-    },
-    {
-      "id": "1759452802037",
-      "name": "ytre",
-      "email": "Wert@sa.ww",
-      "password": "Qqqq1111",
-      "role": "user",
-      "createdAt": "2025-10-03T00:53:22.037Z",
-      "updatedAt": "2025-10-03T00:53:22.037Z"
-    },
-    {
-      "id": "1759452976182",
-      "name": "qweqw",
-      "email": "wqe@wd.ads",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:56:16.182Z",
-      "updatedAt": "2025-10-03T00:56:16.182Z"
-    },
-    {
-      "id": "1759453040387",
-      "name": "kjk",
-      "email": "kjk@g.asd",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T00:57:20.387Z",
-      "updatedAt": "2025-10-03T00:57:20.387Z"
-    },
-    {
-      "id": "1759453723695",
-      "name": "цйу",
-      "email": "wert1234@g.b",
-      "password": "Qqqq1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:08:43.695Z",
-      "updatedAt": "2025-10-03T01:08:43.695Z"
-    },
-    {
-      "id": "1759454129622",
-      "name": "фывыфв",
-      "email": "w@das.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:15:29.622Z",
-      "updatedAt": "2025-10-03T01:15:29.622Z"
-    },
-    {
-      "id": "1759454498995",
-      "name": "sada",
-      "email": "we@sad.a",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:21:38.995Z",
-      "updatedAt": "2025-10-03T01:21:38.995Z"
-    },
-    {
-      "id": "1759454535048",
-      "name": "wqe",
-      "email": "qwe@awqe.da",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:22:15.048Z",
-      "updatedAt": "2025-10-03T01:22:15.048Z"
-    },
-    {
-      "id": "1759454580868",
-      "name": "wqeqwe",
-      "email": "qwe@asda.cd",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:23:00.868Z",
-      "updatedAt": "2025-10-03T01:23:00.869Z"
-    },
-    {
-      "id": "1759454925345",
-      "name": "Wwert",
-      "email": "qwe@asdc.c",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:28:45.345Z",
-      "updatedAt": "2025-10-03T01:28:45.345Z"
-    },
-    {
-      "id": "1759455250768",
-      "name": "dqewqe",
-      "email": "wqew@wqe.cda",
-      "password": "Wert1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:34:10.768Z",
-      "updatedAt": "2025-10-03T01:34:10.768Z"
-    },
-    {
-      "id": "1759455333538",
-      "name": "wqeqwe",
-      "email": "qweqw@ewqwe.c",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:35:33.538Z",
-      "updatedAt": "2025-10-03T01:35:33.538Z"
-    },
-    {
-      "id": "1759455662647",
-      "name": "Wweewr",
-      "email": "wqe@wewqe.asd",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:41:02.647Z",
-      "updatedAt": "2025-10-03T01:41:02.647Z"
-    },
-    {
-      "id": "1759456257473",
-      "name": "wqe",
-      "email": "qwe@wae.qwe",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T01:50:57.473Z",
-      "updatedAt": "2025-10-03T01:50:57.473Z"
-    },
-    {
-      "id": "1759457165368",
-      "name": "фывфыв",
-      "email": "wqeqw@sad.cs",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T02:06:05.368Z",
-      "updatedAt": "2025-10-03T02:06:05.368Z"
-    },
-    {
-      "id": "1759457336397",
-      "name": "qweqwe",
-      "email": "wqe@ad.csad",
-      "password": "1234Qwer",
-      "role": "user",
-      "createdAt": "2025-10-03T02:08:56.397Z",
-      "updatedAt": "2025-10-03T02:08:56.397Z"
-    },
-    {
-      "id": "1759458685457",
-      "name": "Серега",
-      "email": "loh@a.ss",
-      "password": "Qwer1234",
-      "role": "user",
-      "createdAt": "2025-10-03T02:31:25.457Z",
-      "updatedAt": "2025-10-03T02:31:25.457Z"
-    }
-  ],
-  "products": [
-    {
-      "id": "1",
-      "name": "iPhone 15 Pro",
-      "price": 99990,
-      "oldPrice": 109990,
-      "description": "Новый iPhone 15 Pro с титановым корпусом и камерой 48 МП",
-      "category": "smartphones",
-      "brand": "Apple",
-      "images": [
-        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1695048133148-18964d01b6f5?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "display": "6.1″ Super Retina XDR",
-        "processor": "A17 Pro",
-        "memory": "128GB",
-        "camera": "48MP + 12MP + 12MP",
-        "battery": "3274 mAh"
-      },
-      "rating": 4.8,
-      "reviewsCount": 124,
-      "inStock": true,
-      "isNew": true,
-      "isPopular": true,
-      "createdAt": "2024-01-20T12:00:00.000Z",
-      "updatedAt": "2024-01-20T12:00:00.000Z"
-    },
-    {
-      "id": "2",
-      "name": "Samsung Galaxy S24",
-      "price": 79990,
-      "oldPrice": 89990,
-      "description": "Флагманский смартфон Samsung с искусственным интеллектом",
-      "category": "smartphones",
-      "brand": "Samsung",
-      "images": [
-        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "display": "6.2″ Dynamic AMOLED",
-        "processor": "Snapdragon 8 Gen 3",
-        "memory": "256GB",
-        "camera": "50MP + 10MP + 12MP",
-        "battery": "4000 mAh"
-      },
-      "rating": 4.6,
-      "reviewsCount": 89,
-      "inStock": true,
-      "isNew": true,
-      "isPopular": true,
-      "createdAt": "2024-01-18T15:30:00.000Z",
-      "updatedAt": "2024-01-18T15:30:00.000Z"
-    },
-    {
-      "id": "3",
-      "name": "MacBook Air M3",
-      "price": 129990,
-      "description": "Ультратонкий ноутбук с чипом Apple M3",
-      "category": "laptops",
-      "brand": "Apple",
-      "images": [
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "display": "13.6″ Liquid Retina",
-        "processor": "Apple M3",
-        "memory": "256GB SSD",
-        "ram": "8GB",
-        "graphics": "8-core GPU"
-      },
-      "rating": 4.9,
-      "reviewsCount": 67,
-      "inStock": true,
-      "isNew": true,
-      "isPopular": false,
-      "createdAt": "2024-01-22T09:15:00.000Z",
-      "updatedAt": "2024-01-22T09:15:00.000Z"
-    },
-    {
-      "id": "4",
-      "name": "Sony WH-1000XM5",
-      "price": 29990,
-      "oldPrice": 34990,
-      "description": "Беспроводные наушники с шумоподавлением",
-      "category": "headphones",
-      "brand": "Sony",
-      "images": [
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "type": "Накладные",
-        "connection": "Bluetooth 5.2",
-        "battery": "30 часов",
-        "noiseCancellation": "Активное"
-      },
-      "rating": 4.7,
-      "reviewsCount": 203,
-      "inStock": true,
-      "isNew": false,
-      "isPopular": true,
-      "createdAt": "2024-01-12T11:45:00.000Z",
-      "updatedAt": "2024-01-12T11:45:00.000Z"
-    },
-    {
-      "id": "5",
-      "name": "Nintendo Switch OLED",
-      "price": 25990,
-      "description": "Игровая консоль с OLED-экраном",
-      "category": "gaming",
-      "brand": "Nintendo",
-      "images": [
-        "https://images.unsplash.com/photo-1556009114-f6f6d1c9f86c?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "display": "7″ OLED",
-        "storage": "64GB",
-        "battery": "4.5-9 часов",
-        "resolution": "1280x720"
-      },
-      "rating": 4.5,
-      "reviewsCount": 156,
-      "inStock": false,
-      "isNew": false,
-      "isPopular": true,
-      "createdAt": "2024-01-08T16:20:00.000Z",
-      "updatedAt": "2024-01-25T10:00:00.000Z"
-    },
-    {
-      "id": "6",
-      "name": "Apple Watch Series 9",
-      "price": 45990,
-      "description": "Умные часы с функцией двойного касания",
-      "category": "wearables",
-      "brand": "Apple",
-      "images": [
-        "https://images.unsplash.com/photo-1579586337278-3f4364269b5a?w=500&h=500&fit=crop"
-      ],
-      "specifications": {
-        "display": "45mm Retina",
-        "processor": "S9",
-        "battery": "18 часов",
-        "waterResistance": "WR50"
-      },
-      "rating": 4.6,
-      "reviewsCount": 98,
-      "inStock": true,
-      "isNew": true,
-      "isPopular": false,
-      "createdAt": "2024-01-19T13:10:00.000Z",
-      "updatedAt": "2024-01-19T13:10:00.000Z"
     }
   ],
   "categories": [
@@ -462,6 +66,284 @@
       "slug": "wearables",
       "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop",
       "productCount": 1
+    },
+    {
+      "id": "6",
+      "name": "Одежда",
+      "slug": "clothing",
+      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=200&fit=crop",
+      "productCount": 2
+    },
+    {
+      "id": "7",
+      "name": "Обувь",
+      "slug": "shoes",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop",
+      "productCount": 1
+    },
+    {
+      "id": "8",
+      "name": "Аксессуары",
+      "slug": "accessories",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop",
+      "productCount": 1
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro",
+      "price": 99990,
+      "oldPrice": 109990,
+      "description": "Новый iPhone 15 Pro с титановым корпусом и камерой 48 МП",
+      "category": "smartphones",
+      "brand": "Apple",
+      "images": [
+        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&h=500&fit=crop",
+        "https://images.unsplash.com/photo-1695048133148-18964d01b6f5?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "display": "6.1″ Super Retina XDR",
+        "processor": "A17 Pro",
+        "memory": "128GB",
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "3274 mAh"
+      },
+      "rating": 4.8,
+      "reviewsCount": 124,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": true,
+      "createdAt": "2024-01-20T12:00:00.000Z",
+      "updatedAt": "2024-01-20T12:00:00.000Z",
+      "tags": ["flagship", "camera", "premium"]
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S24",
+      "price": 79990,
+      "oldPrice": 89990,
+      "description": "Флагманский смартфон Samsung с искусственным интеллектом",
+      "category": "smartphones",
+      "brand": "Samsung",
+      "images": [
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "display": "6.2″ Dynamic AMOLED",
+        "processor": "Snapdragon 8 Gen 3",
+        "memory": "256GB",
+        "camera": "50MP + 10MP + 12MP",
+        "battery": "4000 mAh"
+      },
+      "rating": 4.6,
+      "reviewsCount": 89,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": true,
+      "createdAt": "2024-01-18T15:30:00.000Z",
+      "updatedAt": "2024-01-18T15:30:00.000Z",
+      "tags": ["ai", "flagship", "android"]
+    },
+    {
+      "id": "3",
+      "name": "MacBook Air M3",
+      "price": 129990,
+      "description": "Ультратонкий ноутбук с чипом Apple M3",
+      "category": "laptops",
+      "brand": "Apple",
+      "images": ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"],
+      "specifications": {
+        "display": "13.6″ Liquid Retina",
+        "processor": "Apple M3",
+        "memory": "256GB SSD",
+        "ram": "8GB",
+        "graphics": "8-core GPU"
+      },
+      "rating": 4.9,
+      "reviewsCount": 67,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": false,
+      "createdAt": "2024-01-22T09:15:00.000Z",
+      "updatedAt": "2024-01-22T09:15:00.000Z",
+      "tags": ["ultrabook", "apple", "portable"]
+    },
+    {
+      "id": "4",
+      "name": "Sony WH-1000XM5",
+      "price": 29990,
+      "oldPrice": 34990,
+      "description": "Беспроводные наушники с шумоподавлением",
+      "category": "headphones",
+      "brand": "Sony",
+      "images": [
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "type": "Накладные",
+        "connection": "Bluetooth 5.2",
+        "battery": "30 часов",
+        "noiseCancellation": "Активное"
+      },
+      "rating": 4.7,
+      "reviewsCount": 203,
+      "inStock": true,
+      "isNew": false,
+      "isPopular": true,
+      "createdAt": "2024-01-12T11:45:00.000Z",
+      "updatedAt": "2024-01-12T11:45:00.000Z",
+      "tags": ["noise-cancelling", "wireless", "premium"]
+    },
+    {
+      "id": "5",
+      "name": "Nintendo Switch OLED",
+      "price": 25990,
+      "description": "Игровая консоль с OLED-экраном",
+      "category": "gaming",
+      "brand": "Nintendo",
+      "images": ["https://images.unsplash.com/photo-1556009114-f6f6d1c9f86c?w=500&h=500&fit=crop"],
+      "specifications": {
+        "display": "7″ OLED",
+        "storage": "64GB",
+        "battery": "4.5-9 часов",
+        "resolution": "1280x720"
+      },
+      "rating": 4.5,
+      "reviewsCount": 156,
+      "inStock": false,
+      "isNew": false,
+      "isPopular": true,
+      "createdAt": "2024-01-08T16:20:00.000Z",
+      "updatedAt": "2024-01-25T10:00:00.000Z",
+      "tags": ["gaming", "portable", "family"]
+    },
+    {
+      "id": "6",
+      "name": "Apple Watch Series 9",
+      "price": 45990,
+      "description": "Умные часы с функцией двойного касания",
+      "category": "wearables",
+      "brand": "Apple",
+      "images": [
+        "https://images.unsplash.com/photo-1579586337278-3f4364269b5a?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "display": "45mm Retina",
+        "processor": "S9",
+        "battery": "18 часов",
+        "waterResistance": "WR50"
+      },
+      "rating": 4.6,
+      "reviewsCount": 98,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": false,
+      "createdAt": "2024-01-19T13:10:00.000Z",
+      "updatedAt": "2024-01-19T13:10:00.000Z",
+      "tags": ["smartwatch", "fitness", "apple"]
+    },
+    {
+      "id": "7",
+      "name": "Джинсы Slim Fit",
+      "price": 4990,
+      "description": "Классические джинсы slim fit из эластичного денима",
+      "category": "clothing",
+      "brand": "Levi's",
+      "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop"],
+      "specifications": {
+        "material": "Хлопок 98%, Эластан 2%",
+        "fit": "Slim",
+        "color": "Синий",
+        "size": "30x32, 32x32, 34x32",
+        "care": "Машинная стирка 30°"
+      },
+      "rating": 4.3,
+      "reviewsCount": 67,
+      "inStock": true,
+      "isNew": false,
+      "isPopular": true,
+      "createdAt": "2024-01-10T14:20:00.000Z",
+      "updatedAt": "2024-01-10T14:20:00.000Z",
+      "tags": ["denim", "casual", "basic"]
+    },
+    {
+      "id": "8",
+      "name": "Кроссовки Nike Air Force 1",
+      "price": 12990,
+      "oldPrice": 14990,
+      "description": "Культовые кроссовки с классическим дизайном",
+      "category": "shoes",
+      "brand": "Nike",
+      "images": [
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "type": "Кроссовки",
+        "material": "Кожа",
+        "sole": "Резиновая",
+        "color": "Белый",
+        "sizes": "40-45",
+        "season": "Всесезонные"
+      },
+      "rating": 4.7,
+      "reviewsCount": 189,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": true,
+      "createdAt": "2024-01-15T11:30:00.000Z",
+      "updatedAt": "2024-01-15T11:30:00.000Z",
+      "tags": ["sneakers", "classic", "sports"]
+    },
+    {
+      "id": "9",
+      "name": "Футболка Basic",
+      "price": 1990,
+      "description": "Базовая футболка из 100% хлопка",
+      "category": "clothing",
+      "brand": "Uniqlo",
+      "images": [
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop"
+      ],
+      "specifications": {
+        "material": "100% Хлопок",
+        "fit": "Regular",
+        "color": "Белый, Черный, Серый",
+        "size": "S, M, L, XL",
+        "care": "Машинная стирка 40°"
+      },
+      "rating": 4.2,
+      "reviewsCount": 45,
+      "inStock": true,
+      "isNew": false,
+      "isPopular": false,
+      "createdAt": "2024-01-05T09:15:00.000Z",
+      "updatedAt": "2024-01-05T09:15:00.000Z",
+      "tags": ["basic", "cotton", "casual"]
+    },
+    {
+      "id": "10",
+      "name": "Рюкзак Herschel",
+      "price": 8990,
+      "description": "Стильный рюкзак для повседневного использования",
+      "category": "accessories",
+      "brand": "Herschel",
+      "images": ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop"],
+      "specifications": {
+        "material": "Полиэстер",
+        "volume": "20л",
+        "compartments": "2 основных + 1 фронтальный",
+        "laptopSleeve": "до 15 дюймов",
+        "color": "Черный, Синий, Бежевый"
+      },
+      "rating": 4.4,
+      "reviewsCount": 78,
+      "inStock": true,
+      "isNew": true,
+      "isPopular": true,
+      "createdAt": "2024-01-22T16:45:00.000Z",
+      "updatedAt": "2024-01-22T16:45:00.000Z",
+      "tags": ["backpack", "urban", "laptop"]
     }
   ],
   "carts": [

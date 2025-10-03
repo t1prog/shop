@@ -33,7 +33,8 @@ const Registration = () => {
       ).unwrap();
 
       console.log("Успешная регистрация:", result);
-      // Отправка
+
+      navigate("/profile");
     } else {
       console.log("Форма содержит ошибки");
     }
