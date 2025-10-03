@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex flex-1 flex-col">
           <div className="flex-1 px-3 py-2 flex items-end">
             <span className="text-2xl font-semibold w-full cursor-default">
-              React + Redux + <span title="шлюха">Твоя мать</span> + Vite + TS
+              React + Redux + Vite + TS
             </span>
           </div>
           <div className="flex flex-row flex-1 items-end place-content-end-safe">
