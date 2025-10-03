@@ -29,6 +29,249 @@
       "role": "admin",
       "createdAt": "2024-01-10T09:00:00.000Z",
       "updatedAt": "2024-01-10T09:00:00.000Z"
+    },
+    {
+      "id": "1759450553547",
+      "name": "Сергей ",
+      "email": "t@g.c",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:15:53.547Z",
+      "updatedAt": "2025-10-03T00:15:53.547Z"
+    },
+    {
+      "id": "1759450747287",
+      "name": "Евгений",
+      "email": "1@g.com",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:19:07.287Z",
+      "updatedAt": "2025-10-03T00:19:07.287Z"
+    },
+    {
+      "id": "1759450933577",
+      "name": "пппп",
+      "email": "r2@s.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:22:13.577Z",
+      "updatedAt": "2025-10-03T00:22:13.577Z"
+    },
+    {
+      "id": "1759451023368",
+      "name": "rty",
+      "email": "ert@we.qwe",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:23:43.368Z",
+      "updatedAt": "2025-10-03T00:23:43.368Z"
+    },
+    {
+      "id": "1759451113924",
+      "name": "wqe",
+      "email": "123@fs.cs",
+      "password": "1234Qwer",
+      "role": "user",
+      "createdAt": "2025-10-03T00:25:13.924Z",
+      "updatedAt": "2025-10-03T00:25:13.924Z"
+    },
+    {
+      "id": "1759451195827",
+      "name": "qwe",
+      "email": "qwe@qwe.2",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:26:35.827Z",
+      "updatedAt": "2025-10-03T00:26:35.827Z"
+    },
+    {
+      "id": "1759451692058",
+      "name": "jks",
+      "email": "sad@ads.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:34:52.058Z",
+      "updatedAt": "2025-10-03T00:34:52.058Z"
+    },
+    {
+      "id": "1759451983749",
+      "name": "цйу",
+      "email": "wer123@f.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:39:43.749Z",
+      "updatedAt": "2025-10-03T00:39:43.749Z"
+    },
+    {
+      "id": "1759452177806",
+      "name": "ыфв",
+      "email": "eq@asd.sda",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:42:57.806Z",
+      "updatedAt": "2025-10-03T00:42:57.806Z"
+    },
+    {
+      "id": "1759452236070",
+      "name": "qwe",
+      "email": "qwe@asd.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:43:56.070Z",
+      "updatedAt": "2025-10-03T00:43:56.070Z"
+    },
+    {
+      "id": "1759452377239",
+      "name": "wqe",
+      "email": "qwe@ewr.sdf",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:46:17.239Z",
+      "updatedAt": "2025-10-03T00:46:17.239Z"
+    },
+    {
+      "id": "1759452802037",
+      "name": "ytre",
+      "email": "Wert@sa.ww",
+      "password": "Qqqq1111",
+      "role": "user",
+      "createdAt": "2025-10-03T00:53:22.037Z",
+      "updatedAt": "2025-10-03T00:53:22.037Z"
+    },
+    {
+      "id": "1759452976182",
+      "name": "qweqw",
+      "email": "wqe@wd.ads",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:56:16.182Z",
+      "updatedAt": "2025-10-03T00:56:16.182Z"
+    },
+    {
+      "id": "1759453040387",
+      "name": "kjk",
+      "email": "kjk@g.asd",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T00:57:20.387Z",
+      "updatedAt": "2025-10-03T00:57:20.387Z"
+    },
+    {
+      "id": "1759453723695",
+      "name": "цйу",
+      "email": "wert1234@g.b",
+      "password": "Qqqq1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:08:43.695Z",
+      "updatedAt": "2025-10-03T01:08:43.695Z"
+    },
+    {
+      "id": "1759454129622",
+      "name": "фывыфв",
+      "email": "w@das.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:15:29.622Z",
+      "updatedAt": "2025-10-03T01:15:29.622Z"
+    },
+    {
+      "id": "1759454498995",
+      "name": "sada",
+      "email": "we@sad.a",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:21:38.995Z",
+      "updatedAt": "2025-10-03T01:21:38.995Z"
+    },
+    {
+      "id": "1759454535048",
+      "name": "wqe",
+      "email": "qwe@awqe.da",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:22:15.048Z",
+      "updatedAt": "2025-10-03T01:22:15.048Z"
+    },
+    {
+      "id": "1759454580868",
+      "name": "wqeqwe",
+      "email": "qwe@asda.cd",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:23:00.868Z",
+      "updatedAt": "2025-10-03T01:23:00.869Z"
+    },
+    {
+      "id": "1759454925345",
+      "name": "Wwert",
+      "email": "qwe@asdc.c",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:28:45.345Z",
+      "updatedAt": "2025-10-03T01:28:45.345Z"
+    },
+    {
+      "id": "1759455250768",
+      "name": "dqewqe",
+      "email": "wqew@wqe.cda",
+      "password": "Wert1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:34:10.768Z",
+      "updatedAt": "2025-10-03T01:34:10.768Z"
+    },
+    {
+      "id": "1759455333538",
+      "name": "wqeqwe",
+      "email": "qweqw@ewqwe.c",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:35:33.538Z",
+      "updatedAt": "2025-10-03T01:35:33.538Z"
+    },
+    {
+      "id": "1759455662647",
+      "name": "Wweewr",
+      "email": "wqe@wewqe.asd",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:41:02.647Z",
+      "updatedAt": "2025-10-03T01:41:02.647Z"
+    },
+    {
+      "id": "1759456257473",
+      "name": "wqe",
+      "email": "qwe@wae.qwe",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T01:50:57.473Z",
+      "updatedAt": "2025-10-03T01:50:57.473Z"
+    },
+    {
+      "id": "1759457165368",
+      "name": "фывфыв",
+      "email": "wqeqw@sad.cs",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T02:06:05.368Z",
+      "updatedAt": "2025-10-03T02:06:05.368Z"
+    },
+    {
+      "id": "1759457336397",
+      "name": "qweqwe",
+      "email": "wqe@ad.csad",
+      "password": "1234Qwer",
+      "role": "user",
+      "createdAt": "2025-10-03T02:08:56.397Z",
+      "updatedAt": "2025-10-03T02:08:56.397Z"
+    },
+    {
+      "id": "1759458685457",
+      "name": "Серега",
+      "email": "loh@a.ss",
+      "password": "Qwer1234",
+      "role": "user",
+      "createdAt": "2025-10-03T02:31:25.457Z",
+      "updatedAt": "2025-10-03T02:31:25.457Z"
     }
   ],
   "products": [
@@ -92,7 +335,9 @@
       "description": "Ультратонкий ноутбук с чипом Apple M3",
       "category": "laptops",
       "brand": "Apple",
-      "images": ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"],
+      "images": [
+        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"
+      ],
       "specifications": {
         "display": "13.6″ Liquid Retina",
         "processor": "Apple M3",
@@ -140,7 +385,9 @@
       "description": "Игровая консоль с OLED-экраном",
       "category": "gaming",
       "brand": "Nintendo",
-      "images": ["https://images.unsplash.com/photo-1556009114-f6f6d1c9f86c?w=500&h=500&fit=crop"],
+      "images": [
+        "https://images.unsplash.com/photo-1556009114-f6f6d1c9f86c?w=500&h=500&fit=crop"
+      ],
       "specifications": {
         "display": "7″ OLED",
         "storage": "64GB",
@@ -217,6 +464,37 @@
       "productCount": 1
     }
   ],
+  "carts": [
+    {
+      "id": "1",
+      "userId": "1",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "addedAt": "2024-01-25T10:30:00.000Z"
+        },
+        {
+          "productId": "4",
+          "quantity": 2,
+          "addedAt": "2024-01-25T11:15:00.000Z"
+        }
+      ],
+      "updatedAt": "2024-01-25T11:15:00.000Z"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "addedAt": "2024-01-24T16:20:00.000Z"
+        }
+      ],
+      "updatedAt": "2024-01-24T16:20:00.000Z"
+    }
+  ],
   "orders": [
     {
       "id": "1",
@@ -272,37 +550,6 @@
       "rating": 4,
       "comment": "Хороший аппарат, но дорогой",
       "createdAt": "2024-01-23T09:45:00.000Z"
-    }
-  ],
-  "carts": [
-    {
-      "id": "1",
-      "userId": "1",
-      "items": [
-        {
-          "productId": "1",
-          "quantity": 1,
-          "addedAt": "2024-01-25T10:30:00.000Z"
-        },
-        {
-          "productId": "4",
-          "quantity": 2,
-          "addedAt": "2024-01-25T11:15:00.000Z"
-        }
-      ],
-      "updatedAt": "2024-01-25T11:15:00.000Z"
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "items": [
-        {
-          "productId": "2",
-          "quantity": 1,
-          "addedAt": "2024-01-24T16:20:00.000Z"
-        }
-      ],
-      "updatedAt": "2024-01-24T16:20:00.000Z"
     }
   ]
 }

@@ -1,11 +1,15 @@
 import { storage } from "@app/utils/localStorage";
 import { api } from "./api";
-import type { LoginCredentials, RegisterData, AuthResponse, User } from "../types/api";
+import type { LoginCredentials, RegisterData, AuthResponse, User, ApiResponse } from "../types/api";
 
 export const authService = {
   // Token management
-  getToken: (): string | null => storage.get("token", null),
-  setToken: (token: string): void => storage.set("token", token),
+  setToken(token: string): void {
+    storage.set("token", token);
+  },
+  getToken(): string | null {
+    return storage.get("token", null);
+  },
   clearToken: (): void => storage.remove("token"),
 
   // Auth methods
@@ -16,9 +20,13 @@ export const authService = {
   },
 
   async register(userData: RegisterData): Promise<AuthResponse> {
-    const response = await api.post<AuthResponse>("/auth/register", userData);
-    this.setToken(response.token);
-    return response;
+    const response = await api.post<ApiResponse<AuthResponse>>("/auth/register", userData);
+    if (response.success) {
+      this.setToken(response.data.token);
+      return response.data;
+    }
+
+    throw new Error(response.message);
   },
 
   async getProfile(): Promise<{ user: User }> {

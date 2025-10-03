@@ -1,14 +1,23 @@
 import type { ApiError } from "../types/api";
+import { authService } from "./authService";
 
 const API_BASE = "/api";
 
 export const api = {
   async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+    const token = authService.getToken();
+
+    const headers: HeadersInit = {
+      "Content-Type": "application/json",
+      ...(options.headers as Record<string, string>),
+    };
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
     const response = await fetch(`${API_BASE}${endpoint}`, {
-      headers: {
-        "Content-Type": "application/json",
-        ...options.headers,
-      },
+      headers, // ← используем headers с токеном
       ...options,
     });
 

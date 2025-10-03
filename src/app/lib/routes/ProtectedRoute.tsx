@@ -1,3 +1,4 @@
+// ProtectedRoute.tsx
 import { Navigate, Outlet } from "react-router";
 import { useAuth } from "@src/app/hooks/redux";
 
@@ -8,11 +9,7 @@ const ProtectedRoute = () => {
     return <div>Загрузка...</div>;
   }
 
-  if (isError) {
-    return <Navigate to="/login" replace />;
-  }
-
-  if (!isAuth) {
+  if (isError || !isAuth) {
     return <Navigate to="/login" replace />;
   }
 

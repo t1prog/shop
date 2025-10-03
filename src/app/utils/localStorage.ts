@@ -1,26 +1,16 @@
-import type { User } from "@app/types/auth";
-
-type StorageSchema = {
-  theme: "light" | "dark";
-  token: string | null;
-  user: User | null;
-};
-
-const get = <K extends keyof StorageSchema>(
-  key: K,
-  fallback: StorageSchema[K],
-): StorageSchema[K] => {
+// utils/localStorage.ts
+const get = <T>(key: string, fallback: T): T => {
   try {
     const item = window.localStorage.getItem(key);
     if (item === null) return fallback;
-    return JSON.parse(item) as StorageSchema[K];
+    return JSON.parse(item) as T;
   } catch (error) {
     console.warn(`Не удалось прочитать "${key}" из localStorage:`, error);
     return fallback;
   }
 };
 
-const set = <K extends keyof StorageSchema>(key: K, value: StorageSchema[K]): void => {
+const set = <T>(key: string, value: T): void => {
   try {
     const serialized = JSON.stringify(value);
     window.localStorage.setItem(key, serialized);
@@ -29,7 +19,7 @@ const set = <K extends keyof StorageSchema>(key: K, value: StorageSchema[K]): vo
   }
 };
 
-const remove = <K extends keyof StorageSchema>(key: K): void => {
+const remove = (key: string): void => {
   window.localStorage.removeItem(key);
 };
 

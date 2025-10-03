@@ -1,11 +1,14 @@
 // Registration.tsx
 import Button from "@src/app/ui/Button";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { useRegistrationForm } from "@src/app/hooks/components/useRegistrationForm";
 import { FormField } from "@src/app/ui/FormField";
+import { useAppDispatch } from "@src/app/hooks/redux";
+import { registerUser } from "@app/store/authSlice";
 
 const Registration = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const {
     formData,
     errors,
@@ -17,20 +20,24 @@ const Registration = () => {
     isFormValid,
   } = useRegistrationForm();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     markAllTouched();
 
     if (validateForm()) {
-      console.log("Форма валидна, данные:", formData);
+      const result = await dispatch(
+        registerUser({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        }),
+      ).unwrap();
+
+      console.log("Успешная регистрация:", result);
       // Отправка
     } else {
       console.log("Форма содержит ошибки");
     }
-  };
-
-  const testUserSet = () => {
-    navigate("/profile");
   };
 
   return (
@@ -86,11 +93,8 @@ const Registration = () => {
             onBlur={handleBlur}
           />
 
-          <Button type="submit" disabled={!isFormValid()}>
+          <Button type="submit" disabled={!isFormValid}>
             Зарегистрироваться
-          </Button>
-          <Button onClick={testUserSet} type="button">
-            Зайти под тестом
           </Button>
         </form>
       </div>

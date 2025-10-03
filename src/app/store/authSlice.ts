@@ -60,6 +60,13 @@ export const fetchUserProfile = createAsyncThunk(
   },
 );
 
+export const initializeAuth = createAsyncThunk("auth/initialize", async (_, { dispatch }) => {
+  const token = authService.getToken();
+  if (token) {
+    await dispatch(fetchUserProfile()).unwrap();
+  }
+});
+
 export const logoutUser = createAsyncThunk("auth/logout", async (_, { rejectWithValue }) => {
   try {
     await authService.logout();
@@ -112,7 +119,6 @@ const authSlice = createSlice({
         state.isAuth = false;
         state.error = action.payload as string;
         state.isError = true;
-        authService.clearToken();
       })
       // Register
       .addCase(registerUser.pending, (state) => {
@@ -130,7 +136,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload as string;
         state.isError = true;
-        authService.clearToken();
       })
       // Fetch Profile
       .addCase(fetchUserProfile.pending, (state) => {
@@ -148,7 +153,6 @@ const authSlice = createSlice({
         state.isAuth = false;
         state.error = action.payload as string;
         state.isError = true;
-        authService.clearToken();
       })
       // Logout
       .addCase(logoutUser.fulfilled, (state) => {

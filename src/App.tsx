@@ -1,15 +1,16 @@
 import { Outlet } from "react-router";
 import { useEffect } from "react";
-import { useTheme, useAuth } from "@app/hooks/redux";
+import { useTheme } from "@app/hooks/redux";
 import { storage } from "@app/utils/localStorage";
 import Container from "@app/ui/Container";
 import Layout from "@components/layout/Layout";
-import { authService } from "@app/services/authService";
+import { useAppDispatch } from "@app/hooks/redux";
 import "./index.css";
+import { initializeAuth } from "@app/store/authSlice";
 
 const App = () => {
   const { theme } = useTheme();
-  const { token } = useAuth();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -17,12 +18,8 @@ const App = () => {
   }, [theme]);
 
   useEffect(() => {
-    if (token) {
-      authService.setToken(token);
-    } else {
-      authService.clearToken();
-    }
-  }, [token]);
+    dispatch(initializeAuth());
+  }, [dispatch]);
 
   return (
     <Layout>
