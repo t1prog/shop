@@ -5,9 +5,9 @@ const Catalog = () => {
   const loadProducts = async () => {
     try {
       const res = await productService.getProducts();
-      console.log(res.products);
-      console.log(res.total);
-      console.log(res.hasMore);
+      console.log(res?.products);
+      console.log(res?.total);
+      console.log(res?.hasMore);
     } catch (error) {
       console.error("Error loading products:", error);
     }
