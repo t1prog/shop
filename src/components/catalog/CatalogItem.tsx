@@ -33,9 +33,7 @@ const CatalogItem = ({ product }: CatalogItemProps) => {
       <div className="flex items-center gap-2 mb-3">
         <span className="text-xl font-bold">{item.price.toLocaleString()} ₽</span>
         {item.oldPrice && item.oldPrice > item.price && (
-          <span className="text-gray-500 line-through text-sm">
-            {item.oldPrice.toLocaleString()} ₽
-          </span>
+          <span className="line-through text-sm">{item.oldPrice.toLocaleString()} ₽</span>
         )}
       </div>
 
