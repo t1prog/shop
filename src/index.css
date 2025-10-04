@@ -20,3 +20,7 @@ body {
   color: var(--theme-second);
   font-family: var(--default-font-family);
 }
+
+.no-scroll-jump {
+  margin-left: calc(100vw - 100%);
+}

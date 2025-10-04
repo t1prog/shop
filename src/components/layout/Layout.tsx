@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
   }, [location, matches]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col no-scroll-jump">
       <Header />
       {children}
       <Footer />

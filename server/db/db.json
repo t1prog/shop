@@ -5,7 +5,7 @@
       "name": "Иван Иванов",
       "email": "ivan@example.com",
       "password": "12345678",
-      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "avatar": "",
       "role": "user",
       "createdAt": "2024-01-15T10:30:00.000Z",
       "updatedAt": "2024-01-15T10:30:00.000Z"
@@ -15,7 +15,7 @@
       "name": "Мария Петрова",
       "email": "maria@example.com",
       "password": "12345678",
-      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      "avatar": "",
       "role": "user",
       "createdAt": "2024-01-16T14:20:00.000Z",
       "updatedAt": "2024-01-16T14:20:00.000Z"
@@ -25,7 +25,7 @@
       "name": "Администратор",
       "email": "admin@example.com",
       "password": "admin123",
-      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+      "avatar": "",
       "role": "admin",
       "createdAt": "2024-01-10T09:00:00.000Z",
       "updatedAt": "2024-01-10T09:00:00.000Z"
@@ -36,56 +36,56 @@
       "id": "1",
       "name": "Смартфоны",
       "slug": "smartphones",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 2
     },
     {
       "id": "2",
       "name": "Ноутбуки",
       "slug": "laptops",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     },
     {
       "id": "3",
       "name": "Наушники",
       "slug": "headphones",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     },
     {
       "id": "4",
       "name": "Игровые консоли",
       "slug": "gaming",
-      "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     },
     {
       "id": "5",
       "name": "Умные часы",
       "slug": "wearables",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     },
     {
       "id": "6",
       "name": "Одежда",
       "slug": "clothing",
-      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 2
     },
     {
       "id": "7",
       "name": "Обувь",
       "slug": "shoes",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     },
     {
       "id": "8",
       "name": "Аксессуары",
       "slug": "accessories",
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop",
+      "image": "",
       "productCount": 1
     }
   ],
@@ -99,8 +99,11 @@
       "category": "smartphones",
       "brand": "Apple",
       "images": [
-        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1695048133148-18964d01b6f5?w=500&h=500&fit=crop"
+        "https://c.dns-shop.ru/thumb/st1/fit/500/500/6908dbc5933c57d838f947b330178dbc/14ce8c6a5fbaef30feb3cb6b7d742546c045c44eb9207be4acec68cade72a7cf.jpg",
+        "https://c.dns-shop.ru/thumb/st1/fit/500/500/480d8b34fc6a28327158af63762d6e26/06ef9531d8e1565754a5ee0227da2552508921cb8ed8e11222d5bc698cb6fbbe.jpg",
+        "https://c.dns-shop.ru/thumb/st1/fit/500/500/fc07de1df99c7169be59730d1d833813/956fa218d2e993ae50bb14aca4b0be3833eb8de44f78b8ab6dd11695eb3b1510.jpg",
+        "https://c.dns-shop.ru/thumb/st1/fit/500/500/fe3a668cf344466ea87a9f46825ce8e2/641be5dad33c8095955be4b4fd87bbdbdd8616ccb54b03cabacefd37971dd6d7.jpg",
+        "https://c.dns-shop.ru/thumb/st1/fit/500/500/ae6bdb1f33d33c5370cb69f396d70d6b/7d79b7235a678841b1f55375dbd1781f3d6301a22632c11fc96e95cb5981dec5.jpg"
       ],
       "specifications": {
         "display": "6.1″ Super Retina XDR",
@@ -126,9 +129,7 @@
       "description": "Флагманский смартфон Samsung с искусственным интеллектом",
       "category": "smartphones",
       "brand": "Samsung",
-      "images": [
-        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&h=500&fit=crop"
-      ],
+      "images": [],
       "specifications": {
         "display": "6.2″ Dynamic AMOLED",
         "processor": "Snapdragon 8 Gen 3",
@@ -152,7 +153,7 @@
       "description": "Ультратонкий ноутбук с чипом Apple M3",
       "category": "laptops",
       "brand": "Apple",
-      "images": ["https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"],
+      "images": [],
       "specifications": {
         "display": "13.6″ Liquid Retina",
         "processor": "Apple M3",
@@ -177,9 +178,7 @@
       "description": "Беспроводные наушники с шумоподавлением",
       "category": "headphones",
       "brand": "Sony",
-      "images": [
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=500&fit=crop"
-      ],
+      "images": [],
       "specifications": {
         "type": "Накладные",
         "connection": "Bluetooth 5.2",
@@ -202,7 +201,7 @@
       "description": "Игровая консоль с OLED-экраном",
       "category": "gaming",
       "brand": "Nintendo",
-      "images": ["https://images.unsplash.com/photo-1556009114-f6f6d1c9f86c?w=500&h=500&fit=crop"],
+      "images": [],
       "specifications": {
         "display": "7″ OLED",
         "storage": "64GB",
@@ -225,9 +224,7 @@
       "description": "Умные часы с функцией двойного касания",
       "category": "wearables",
       "brand": "Apple",
-      "images": [
-        "https://images.unsplash.com/photo-1579586337278-3f4364269b5a?w=500&h=500&fit=crop"
-      ],
+      "images": [],
       "specifications": {
         "display": "45mm Retina",
         "processor": "S9",
@@ -250,7 +247,7 @@
       "description": "Классические джинсы slim fit из эластичного денима",
       "category": "clothing",
       "brand": "Levi's",
-      "images": ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop"],
+      "images": [],
       "specifications": {
         "material": "Хлопок 98%, Эластан 2%",
         "fit": "Slim",
@@ -275,9 +272,7 @@
       "description": "Культовые кроссовки с классическим дизайном",
       "category": "shoes",
       "brand": "Nike",
-      "images": [
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop"
-      ],
+      "images": [],
       "specifications": {
         "type": "Кроссовки",
         "material": "Кожа",
@@ -302,9 +297,7 @@
       "description": "Базовая футболка из 100% хлопка",
       "category": "clothing",
       "brand": "Uniqlo",
-      "images": [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop"
-      ],
+      "images": [],
       "specifications": {
         "material": "100% Хлопок",
         "fit": "Regular",
@@ -328,7 +321,7 @@
       "description": "Стильный рюкзак для повседневного использования",
       "category": "accessories",
       "brand": "Herschel",
-      "images": ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop"],
+      "images": [],
       "specifications": {
         "material": "Полиэстер",
         "volume": "20л",
