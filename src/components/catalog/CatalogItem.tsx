@@ -43,7 +43,8 @@ const CatalogItem = ({ product }: CatalogItemProps) => {
         {item.inStock ? "В наличии" : "Нет в наличии"}
       </div>
 
-      <Button disabled={!item.inStock}>{item.inStock ? "В корзину" : "Нет в наличии"}</Button>
+      <Button disabled={true}>{item.inStock ? "В корзину" : "Нет в наличии"}</Button>
+      {/* <Button disabled={!item.inStock}>{item.inStock ? "В корзину" : "Нет в наличии"}</Button> */}
     </div>
   );
 };
